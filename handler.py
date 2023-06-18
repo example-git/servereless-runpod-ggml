@@ -5,7 +5,7 @@ from typing import Generator, Union
 import runpod
 from ctransformers import AutoModelForCausalLM
 from huggingface_hub import hf_hub_download
-
+job_stream = ""
 logging.basicConfig(level=os.getenv("LOG_LEVEL", "INFO"))
 
 repo_file = hf_hub_download(repo_id=os.environ["GGML_REPO"], filename=os.environ["GGML_FILE"], revision=os.environ.get("GGML_REVISION", "main"))
